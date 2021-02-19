@@ -10,10 +10,6 @@ stages:
   - compile
   - test
 
-branches:
-  only:
-    - stages
-
 jobs:
   include:
     - stage: compile
