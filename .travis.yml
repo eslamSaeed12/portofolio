@@ -1,0 +1,27 @@
+language: node_js
+
+node_js:
+  - 14.5
+
+env:
+  - PORT=3000
+
+stages:
+  - compile
+  - test
+
+branches:
+  only:
+    - stages
+
+jobs:
+  include:
+    - stage: compile
+      name: "compile typescript to javascript"
+      install: npm install
+      script: npm run build
+
+    - stage: test
+      name: "testing code"
+      install: npm install
+      script: npm test  
