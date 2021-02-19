@@ -6,17 +6,8 @@ node_js:
 env:
   - PORT=3000
 
-stages:
-  - compile
-  - test
+install: npm install
 
-jobs:
-  include:
-    - stage: compile
-      name: "compile typescript to javascript"
-      install: npm install
-      script: npm run build
-      
-    - stage: test
-      name: "testing code"
-      script: npm test  
+script:
+  - npm run build
+  - npm test
