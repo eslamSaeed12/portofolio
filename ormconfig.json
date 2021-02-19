@@ -1,0 +1,15 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "",
+  "database": "test",
+  "synchronize": false,
+  "logging": true,
+  "entities": ["src/Database/models/**/*.ts"],
+  "migrations": ["src/Database/migrations/**/*.ts"],
+  "subscribers": ["src/Database/subscribers/**/*.ts"],
+  "seeds": ["src/Database/seeds/**/*{.ts}"],
+  "factories": ["src/Database/factories/**/*{.ts}"]
+}
