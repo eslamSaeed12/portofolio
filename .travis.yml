@@ -7,18 +7,16 @@ env:
   - PORT=3000
 
 stages:
-  - install
   - compile
   - test
 
 jobs:
   include:
-    - stage: install
-      name: "install dependencies"
-      install: npm install
     - stage: compile
       name: "compile typescript to javascript"
+      install: npm install
       script: npm run build
+      
     - stage: test
       name: "testing code"
       script: npm test  
