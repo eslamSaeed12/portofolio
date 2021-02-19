@@ -11,13 +11,12 @@ stages:
   - test
 
 jobs:
+  install: npm install
   include:
     - stage: compile
       name: "compile typescript to javascript"
-      install: npm install
       script: npm run build
 
     - stage: test
       name: "testing code"
-      install: npm install
       script: npm test  
